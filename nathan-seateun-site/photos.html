@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Photos — Nathan Seateun</title>
+	<meta name="description" content="Galerie photos des entraînements et cours de tennis avec Nathan Seateun.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="/" class="brand">Nathan<span>Seateun</span></a>
+			<nav class="nav">
+				<a href="/index.html" class="nav-link">Accueil</a>
+				<a href="/photos.html" class="nav-link active">Photos</a>
+				<a href="/contact.html" class="nav-link">Contact</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="gallery">
+			<div class="container">
+				<h1>Photos</h1>
+				<div class="gallery-grid" id="gallery">
+					<a href="https://source.unsplash.com/1600x1000/?tennis,serve"><img src="https://source.unsplash.com/600x400/?tennis,serve" alt="Entraînement 1"></a>
+					<a href="https://source.unsplash.com/1600x1000/?tennis,backhand"><img src="https://source.unsplash.com/600x400/?tennis,backhand" alt="Entraînement 2"></a>
+					<a href="https://source.unsplash.com/1600x1000/?tennis,forehand"><img src="https://source.unsplash.com/600x400/?tennis,forehand" alt="Entraînement 3"></a>
+					<a href="https://source.unsplash.com/1600x1000/?tennis,court"><img src="https://source.unsplash.com/600x400/?tennis,court" alt="Entraînement 4"></a>
+					<a href="https://source.unsplash.com/1600x1000/?tennis,training"><img src="https://source.unsplash.com/600x400/?tennis,training" alt="Entraînement 5"></a>
+					<a href="https://source.unsplash.com/1600x1000/?tennis,coach"><img src="https://source.unsplash.com/600x400/?tennis,coach" alt="Entraînement 6"></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© <span id="year"></span> Nathan Seateun. Tous droits réservés.</p>
+			<div class="socials">
+				<a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+				<a href="mailto:contact@nathan-seateun.com">Email</a>
+			</div>
+		</div>
+	</footer>
+	<script src="/assets/js/main.js" defer></script>
+	<script>
+	// Lightbox minimaliste
+	const gallery = document.getElementById('gallery');
+	let overlay;
+	if (gallery) {
+		gallery.addEventListener('click', function(e){
+			const link = e.target.closest('a');
+			if (!link) return;
+			e.preventDefault();
+			if (!overlay) {
+				overlay = document.createElement('div');
+				overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px;';
+				const img = document.createElement('img');
+				img.style.cssText = 'max-width:min(100%,1100px);max-height:90vh;border-radius:12px;';
+				overlay.appendChild(img);
+				overlay.addEventListener('click', ()=> overlay.remove());
+				document.body.appendChild(overlay);
+			}
+			overlay.querySelector('img').src = link.getAttribute('href');
+		});
+	}
+	</script>
+</body>
+</html>
