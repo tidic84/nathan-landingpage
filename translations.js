@@ -19,7 +19,7 @@ const translations = {
         'services-quote': '"Chaque joueur est unique. J\'adapte mes cours à votre rythme, vos objectifs et vos envies."',
         'approach-title': 'Mon Approche',
         'locations-title': 'Nos Lieux d\'Intervention',
-        'photos-title': 'En Action',
+        'photos-title': 'Galerie',
         'testimonials-title': 'Témoignages',
         'contact-title': 'Contact & Réservation',
         
@@ -50,20 +50,6 @@ const translations = {
         'contact-whatsapp': 'WhatsApp',
         'contact-ready': 'Prêt à jouer au tennis sous le soleil de Provence ?',
         'contact-call': 'Appeler maintenant',
-        'contact-form-title': 'Demande de renseignements',
-        
-        // Form
-        'form-name': 'Votre nom',
-        'form-email': 'Votre email',
-        'form-phone': 'Votre téléphone',
-        'form-level': 'Votre niveau',
-        'form-level-default': 'Votre niveau',
-        'form-level-beginner': 'Débutant',
-        'form-level-intermediate': 'Intermédiaire',
-        'form-level-advanced': 'Avancé',
-        'form-level-competition': 'Compétition',
-        'form-message': 'Votre message ou objectifs spécifiques',
-        'form-submit': 'Envoyer ma demande',
         
         // Footer
         'footer-navigation': 'Navigation',
@@ -90,7 +76,7 @@ const translations = {
         'services-quote': '"Every player is unique. I adapt my lessons to your pace, goals and desires."',
         'approach-title': 'My Approach',
         'locations-title': 'Our Service Areas',
-        'photos-title': 'In Action',
+        'photos-title': 'Gallery',
         'testimonials-title': 'Testimonials',
         'contact-title': 'Contact & Booking',
         
@@ -121,20 +107,6 @@ const translations = {
         'contact-whatsapp': 'WhatsApp',
         'contact-ready': 'Ready to play tennis under the Provence sun?',
         'contact-call': 'Call now',
-        'contact-form-title': 'Information request',
-        
-        // Form
-        'form-name': 'Your name',
-        'form-email': 'Your email',
-        'form-phone': 'Your phone',
-        'form-level': 'Your level',
-        'form-level-default': 'Your level',
-        'form-level-beginner': 'Beginner',
-        'form-level-intermediate': 'Intermediate',
-        'form-level-advanced': 'Advanced',
-        'form-level-competition': 'Competition',
-        'form-message': 'Your message or specific goals',
-        'form-submit': 'Send my request',
         
         // Footer
         'footer-navigation': 'Navigation',
@@ -168,50 +140,10 @@ function translatePage() {
         }
     });
     
-    // Traduire les placeholders et attributs spéciaux
-    translatePlaceholders();
+    // Traduire les attributs spéciaux
     translateAltTexts();
 }
 
-// Fonction pour traduire les placeholders des formulaires
-function translatePlaceholders() {
-    const placeholderMap = {
-        'fr': {
-            'name': 'Votre nom',
-            'email': 'Votre email', 
-            'phone': 'Votre téléphone',
-            'message': 'Votre message ou objectifs spécifiques'
-        },
-        'en': {
-            'name': 'Your name',
-            'email': 'Your email',
-            'phone': 'Your phone', 
-            'message': 'Your message or specific goals'
-        }
-    };
-    
-    // Formulaire de contact
-    const nameInput = document.querySelector('input[name="name"]');
-    const emailInput = document.querySelector('input[name="email"]');
-    const phoneInput = document.querySelector('input[name="phone"]');
-    const messageTextarea = document.querySelector('textarea[name="message"]');
-    
-    if (nameInput) nameInput.placeholder = placeholderMap[currentLanguage].name;
-    if (emailInput) emailInput.placeholder = placeholderMap[currentLanguage].email;
-    if (phoneInput) phoneInput.placeholder = placeholderMap[currentLanguage].phone;
-    if (messageTextarea) messageTextarea.placeholder = placeholderMap[currentLanguage].message;
-    
-    // Options du select
-    const levelSelect = document.querySelector('select[name="level"]');
-    if (levelSelect) {
-        const options = levelSelect.querySelectorAll('option');
-        options[0].textContent = translations[currentLanguage]['form-level-default'];
-        options[1].textContent = translations[currentLanguage]['form-level-beginner'];
-        options[2].textContent = translations[currentLanguage]['form-level-intermediate'];
-        options[3].textContent = translations[currentLanguage]['form-level-advanced'];
-        options[4].textContent = translations[currentLanguage]['form-level-competition'];
-    }
-}
 
 // Fonction pour traduire les textes alt et autres attributs
 function translateAltTexts() {
