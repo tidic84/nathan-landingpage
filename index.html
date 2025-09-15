@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Tennis Coaching | Nathan Seateun - Ancien joueur ATP | Luberon & Alpilles</title>
+    <meta name="description" content="Cours de tennis privés avec Nathan Seateun, ancien joueur ATP (660ème mondial) et coach diplômé d'État. Coaching personnalisé au cœur du Luberon et des Alpilles.">
+    <meta name="keywords" content="Nathan Seateun, coach tennis, cours particuliers, ATP, Luberon, Alpilles, Provence, tennis privé, coaching personnalisé">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6B7553', // vert olive
+                        secondary: '#4A6FA5', // bleu Provence  
+                        accent: '#D2B48C', // beige pierre
+                        'provence-blue': '#4A6FA5',
+                        'olive-green': '#6B7553',
+                        'stone-beige': '#D2B48C'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Navigation mobile styles */
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 80px;
+            flex-direction: column;
+            background-color: white;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            padding: 2rem 0;
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #2c5530;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                position: static;
+                flex-direction: row;
+                background: none;
+                box-shadow: none;
+                padding: 0;
+                width: auto;
+                left: auto;
+                top: auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-menu {
+                padding: 2rem 0;
+            }
+            
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+            
+            #language-toggle {
+                margin-top: 1rem;
+            }
+        }
+
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter text-gray-900 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-5 flex justify-between items-center h-20">
+            <div class="nav-logo flex items-center gap-3">
+                <img src="assets/logo.jpg" alt="Private Tennis Coaching Logo" class="h-12 w-auto">
+                <div>
+                    <h2 class="text-primary font-bold text-xl mb-0 leading-tight">Private Tennis Coaching</h2>
+                    <span class="text-gray-500 text-xs font-normal">Luberon & Alpilles</span>
+                </div>
+            </div>
+            <ul class="nav-menu hidden md:flex list-none gap-8 items-center">
+                <li>
+                    <a href="#accueil" class="nav-link text-gray-900 font-medium hover:text-primary transition-colors duration-300 relative active" data-translate="nav-home">Accueil</a>
+                </li>
+                <li>
+                    <a href="#photos" class="nav-link text-gray-900 font-medium hover:text-primary transition-colors duration-300 relative" data-translate="nav-photos">Photos</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link text-gray-900 font-medium hover:text-primary transition-colors duration-300 relative" data-translate="nav-contact">Contact</a>
+                </li>
+                <li>
+                    <button id="language-toggle" class="flex items-center gap-2 px-3 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition-colors duration-300 text-sm font-medium">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">FR</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger md:hidden flex flex-col cursor-pointer">
+                <span class="bar w-6 h-0.5 bg-gray-900 my-0.5 transition-all duration-300"></span>
+                <span class="bar w-6 h-0.5 bg-gray-900 my-0.5 transition-all duration-300"></span>
+                <span class="bar w-6 h-0.5 bg-gray-900 my-0.5 transition-all duration-300"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="pt-30 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-20">
+            <div class="hero-content text-center lg:text-left">
+                <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900" data-translate="hero-title">
+                    Viens progresser avec un <span class="text-primary relative">ancien joueur ATP<span class="absolute bottom-1 left-0 w-full h-2 bg-accent/30 -z-10"></span></span> et coach passionné
+                </h1>
+                <p class="text-xl text-gray-600 mb-6 leading-relaxed" data-translate="hero-subtitle">
+                    Cours de tennis privés au cœur du <strong>Luberon et des Alpilles</strong> – coaching personnalisé, à domicile ou sur nos terrains partenaires
+                </p>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed" data-translate="hero-description">
+                    Un suivi personnalisé pour progresser rapidement, adapté à votre niveau et vos objectifs dans un cadre exceptionnel.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-secondary transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl" data-translate="hero-cta1">Réserver votre session</a>
+                    <a href="#photos" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-primary font-semibold border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-300" data-translate="hero-cta2">Voir en action</a>
+                </div>
+            </div>
+            <div class="hero-image relative">
+                <img src="assets/Capture d'écran 2025-08-17 192423.png" alt="Nathan Seateun Coach Tennis" class="w-full h-96 lg:h-[500px] object-cover rounded-xl shadow-2xl transition-opacity duration-300" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Qualifications et Classement -->
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6" data-translate="professional-title">Parcours Professionnel</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-3 h-3 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700"><strong data-translate="pro-desc1">Ancien joueur de tennis professionnel</strong><br>
+                            <span class="text-base text-gray-600" data-translate="pro-rank">660ème ATP et Numéro 83 Français</span></p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-3 h-3 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700"><strong data-translate="pro-desc2">Vainqueur de 3 Titres Professionnels 15000$</strong><br>
+                            <span class="text-base text-gray-600" data-translate="pro-tournaments">Canaries, Sharm El Sheikh et Caire</span></p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-3 h-3 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700"><strong data-translate="pro-desc3">Coach Diplômé d'État Tennis</strong><br>
+                            <span class="text-base text-gray-600" data-translate="pro-certified">Certifié et formé auprès d'académies reconnues</span></p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-3 h-3 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700"><strong data-translate="pro-desc4">Spécialiste tous niveaux</strong><br>
+                            <span class="text-base text-gray-600" data-translate="pro-levels">Débutants, confirmés et compétiteurs</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right">
+                    <img src="assets/Capture d'écran 2025-08-17 192612.png" alt="Classement Nathan Seateun" class="max-w-full h-auto rounded-xl shadow-lg mx-auto lg:mx-0" />
+                    <p class="text-sm text-gray-500 mt-4">Classement officiel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6" data-translate="services-title">Nos Services</h2>
+            <p class="text-center text-xl text-gray-600 mb-12 italic" data-translate="services-quote">"Chaque joueur est unique. J'adapte mes cours à votre rythme, vos objectifs et vos envies."</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="service-card bg-white p-10 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-50">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900" data-translate="service1-title">Cours Individuel</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="service1-desc">Un suivi entièrement personnalisé, adapté à votre niveau, vos objectifs et votre rythme. Idéal pour progresser rapidement avec des conseils sur mesure.</p>
+                </div>
+                <div class="service-card bg-white p-10 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-50">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900" data-translate="service2-title">En Solo ou à Plusieurs</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="service2-desc">Partagez votre passion avec un proche ou en petit groupe. Travail technique, tactique et convivialité garantis, dans une ambiance chaleureuse.</p>
+                </div>
+                <div class="service-card bg-white p-10 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-50">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900" data-translate="service3-title">Stages</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="service3-desc">Des formules sur plusieurs jours au cœur du Luberon et des Alpilles, pour une immersion sportive et un apprentissage accéléré alliant plaisir et performance.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                    <strong>Débutants, joueurs confirmés ou compétiteurs :</strong> développez votre technique, votre stratégie et votre plaisir de jeu grâce à un accompagnement sur-mesure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos / Valeurs -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-12" data-translate="approach-title">Mon Approche</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="assets/IMG-20240314-WA0008.jpg" alt="Nathan Seateun coaching" class="w-full h-96 object-cover rounded-xl shadow-lg">
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Passionné de tennis depuis toujours et fort d'une expérience en compétition nationale et internationale, je mets mon expertise au service des joueurs de tous âges et niveaux.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Mon approche allie <strong class="text-primary">rigueur technique</strong>, <strong class="text-secondary">plaisir du jeu</strong> et <strong class="text-accent">adaptation personnalisée</strong>, afin de vous permettre de progresser dans un cadre convivial et motivant.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Formé auprès d'académies reconnues et certifié, j'accompagne aussi bien les débutants souhaitant découvrir le tennis que les joueurs confirmés en quête de performance.
+                    </p>
+                    <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+                        <p class="text-lg text-gray-800 font-medium italic">
+                            "L'objectif est clair : vous aider à donner le meilleur de vous-même, dans un environnement unique au cœur de la Provence."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Lieux d'intervention -->
+    <section class="py-16 bg-gradient-to-r from-stone-beige/20 to-provence-blue/20">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6" data-translate="locations-title">Nos Lieux d'Intervention</h2>
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Coaching possible sur vos <strong>terrains privés</strong>, <strong>hôtels partenaires</strong> dans le secteur <strong class="text-primary">Luberon/Alpilles</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Photos -->
+    <section id="photos" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6" data-translate="photos-title">En Action</h2>
+            <p class="text-center text-xl text-gray-600 mb-12">Découvrez mon approche à travers ces moments d'entraînement</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="photo-item relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <img src="assets/IMG-20240314-WA0003.jpg" alt="Nathan Seateun en action" class="w-full h-75 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="photo-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Entraînement</h3>
+                        <p class="text-sm opacity-90">Nathan en action lors d'une séance</p>
+                    </div>
+                </div>
+                <div class="photo-item relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <img src="assets/IMG-20240314-WA0004.jpg" alt="Coaching personnalisé" class="w-full h-75 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="photo-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Coaching Personnalisé</h3>
+                        <p class="text-sm opacity-90">Accompagnement technique individuel</p>
+                    </div>
+                </div>
+                <div class="photo-item relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <img src="assets/IMG-20240314-WA0006.jpg" alt="Formation technique" class="w-full h-75 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="photo-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Formation Technique</h3>
+                        <p class="text-sm opacity-90">Perfectionnement des gestes</p>
+                    </div>
+                </div>
+                <div class="photo-item relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <img src="assets/IMG-20240314-WA0007.jpg" alt="Passion du tennis" class="w-full h-75 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div class="photo-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Passion du Tennis</h3>
+                        <p class="text-sm opacity-90">Transmettre l'amour du jeu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-12" data-translate="testimonials-title">Témoignages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl border-l-4 border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                    <div class="stars text-yellow-400 mb-4 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-600 mb-6 leading-relaxed">"Une expérience incroyable ! J'ai énormément progressé en quelques séances seulement."</p>
+                    <div class="testimonial-author">
+                        <strong class="text-gray-900 font-semibold block">Sophie</strong>
+                        <span class="text-gray-500 text-sm">Gordes</span>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl border-l-4 border-secondary hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                    <div class="stars text-yellow-400 mb-4 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-600 mb-6 leading-relaxed">"Un coach passionné et à l'écoute. Idéal pour reprendre confiance et améliorer sa technique."</p>
+                    <div class="testimonial-author">
+                        <strong class="text-gray-900 font-semibold block">Marc</strong>
+                        <span class="text-gray-500 text-sm">Saint-Rémy</span>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl border-l-4 border-accent hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                    <div class="stars text-yellow-400 mb-4 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-600 mb-6 leading-relaxed">"Un coaching personnalisé qui fait toute la différence, je recommande vivement."</p>
+                    <div class="testimonial-author">
+                        <strong class="text-gray-900 font-semibold block">Thomas</strong>
+                        <span class="text-gray-500 text-sm">Bonnieux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6" data-translate="contact-title">Contact & Réservation</h2>
+            <p class="text-center text-xl text-gray-600 mb-12" data-translate="contact-subtitle">Prêt à jouer ? Contactez-nous pour réserver un cours ou obtenir plus d'informations.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
+                <div class="contact-info">
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-900" data-translate="contact-info-title">Informations de contact</h3>
+                    <div class="space-y-8">
+                        <div class="contact-item flex items-start gap-4">
+                            <i class="fas fa-phone text-primary text-xl mt-1 min-w-[20px]"></i>
+                            <div>
+                                <strong class="text-gray-900 font-semibold block mb-1" data-translate="contact-phone">Téléphone</strong>
+                                <p class="text-gray-600 m-0">+33 6 95 74 83 81</p>
+                            </div>
+                        </div>
+                        <div class="contact-item flex items-start gap-4">
+                            <i class="fas fa-envelope text-primary text-xl mt-1 min-w-[20px]"></i>
+                            <div>
+                                <strong class="text-gray-900 font-semibold block mb-1" data-translate="contact-email">Email</strong>
+                                <p class="text-gray-600 m-0">nathanseateun@outlook.fr</p>
+                            </div>
+                        </div>
+                        <div class="contact-item flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-primary text-xl mt-1 min-w-[20px]"></i>
+                            <div>
+                                <strong class="text-gray-900 font-semibold block mb-1" data-translate="contact-zone">Zone d'intervention</strong>
+                                <p class="text-gray-600 m-0">Luberon & Alpilles</p>
+                            </div>
+                        </div>
+                        <div class="contact-item flex items-start gap-4">
+                            <i class="fab fa-whatsapp text-primary text-xl mt-1 min-w-[20px]"></i>
+                            <div>
+                                <strong class="text-gray-900 font-semibold block mb-1" data-translate="contact-whatsapp">WhatsApp</strong>
+                                <p class="text-gray-600 m-0">+33 6 95 74 83 81</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-lg text-gray-700 mb-4 font-medium" data-translate="contact-ready">Prêt à jouer au tennis sous le soleil de Provence ?</p>
+                        <a href="tel:+33695748381" class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-primary transition-colors duration-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span data-translate="contact-call">Appeler maintenant</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form bg-white p-10 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-900" data-translate="contact-form-title">Demande de renseignements</h3>
+                    <div class="space-y-6">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Votre nom" required class="w-full p-4 border-2 border-gray-200 rounded-xl text-base transition-colors duration-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 font-inter">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required class="w-full p-4 border-2 border-gray-200 rounded-xl text-base transition-colors duration-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 font-inter">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Votre téléphone" class="w-full p-4 border-2 border-gray-200 rounded-xl text-base transition-colors duration-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 font-inter">
+                        </div>
+                        <div class="form-group">
+                            <select name="level" required class="w-full p-4 border-2 border-gray-200 rounded-xl text-base transition-colors duration-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 font-inter">
+                                <option value="">Votre niveau</option>
+                                <option value="debutant">Débutant</option>
+                                <option value="intermediaire">Intermédiaire</option>
+                                <option value="avance">Avancé</option>
+                                <option value="competition">Compétition</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Votre message ou objectifs spécifiques" rows="4" class="w-full p-4 border-2 border-gray-200 rounded-xl text-base transition-colors duration-300 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 font-inter resize-vertical min-h-[120px]"></textarea>
+                        </div>
+                        <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-secondary transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl" data-translate="form-submit">Envoyer ma demande</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div class="footer-section">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/logo.jpg" alt="Private Tennis Coaching Logo" class="h-10 w-auto">
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Private Tennis Coaching</h3>
+                            <p class="text-gray-400 text-sm">Luberon & Alpilles</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300" data-translate="footer-description">Ancien joueur ATP et coach diplômé d'État</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="text-lg font-semibold mb-4 text-white" data-translate="footer-navigation">Navigation</h4>
+                    <ul class="list-none space-y-2">
+                        <li><a href="#accueil" class="text-gray-300 hover:text-accent transition-colors duration-300">Accueil</a></li>
+                        <li><a href="#photos" class="text-gray-300 hover:text-accent transition-colors duration-300">Photos</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-accent transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="text-lg font-semibold mb-4 text-white" data-translate="footer-contact">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2"></i> +33 6 95 74 83 81</p>
+                        <p><i class="fas fa-envelope mr-2"></i> nathanseateun@outlook.fr</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Luberon & Alpilles</p>
+                    </div>
+                    <div class="social-links flex gap-3 mt-4">
+                        <a href="#" aria-label="WhatsApp" class="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-secondary hover:-translate-y-1 transition-all duration-300"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram" class="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-secondary hover:-translate-y-1 transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" class="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-secondary hover:-translate-y-1 transition-all duration-300"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom border-t border-gray-700 pt-4 text-center">
+                <p class="text-gray-400" data-translate="footer-copyright">&copy; 2024 Private Tennis Coaching - Nathan Seateun. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
