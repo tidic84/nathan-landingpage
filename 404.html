@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Private Tennis Coaching</title>
+    <meta name="description" content="Page not found - Return to Private Tennis Coaching">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6B7553', // vert olive
+                        secondary: '#4A6FA5', // bleu Provence  
+                        accent: '#D2B48C', // beige pierre
+                        'provence-blue': '#4A6FA5',
+                        'olive-green': '#6B7553',
+                        'stone-beige': '#D2B48C'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter text-gray-900 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-2xl mx-auto px-5 text-center">
+        <!-- 404 Error -->
+        <div class="mb-8">
+            <h1 class="text-8xl lg:text-9xl font-bold text-primary mb-4">404</h1>
+            <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Oops! Page Not Found
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                The page you're looking for doesn't exist or has been moved.
+            </p>
+            <p class="text-lg text-gray-500">
+                Let's get you back on track!
+            </p>
+        </div>
+        
+        <!-- Action Button -->
+        <div class="mb-12">
+            <a href="/" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-secondary transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <i class="fas fa-home mr-2"></i>
+                Go Home
+            </a>
+        </div>
+        
+        <!-- Tennis Icon -->
+        <div class="opacity-20">
+            <i class="fas fa-tennis-ball text-6xl text-primary"></i>
+        </div>
+    </div>
+</body>
+</html>
