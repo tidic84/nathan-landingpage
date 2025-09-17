@@ -51,11 +51,40 @@ const translations = {
         'contact-ready': 'Prêt à jouer au tennis sous le soleil de Provence ?',
         'contact-call': 'Appeler maintenant',
         
+        // Gallery
+        'photos-description': 'Découvrez mon parcours à travers ces photos',
+        
+        // Approach section
+        'approach-text1': 'Passionné de tennis depuis toujours et fort d\'une expérience en compétition nationale et internationale, je mets mon expertise au service des joueurs de tous âges et niveaux.',
+        'approach-text2': 'Mon approche allie <strong class="text-primary">rigueur technique</strong>, <strong class="text-secondary">plaisir du jeu</strong> et <strong class="text-accent">adaptation personnalisée</strong>, afin de vous permettre de progresser dans un cadre convivial et motivant.',
+        'approach-text3': 'Formé auprès d\'académies reconnues et certifié, j\'accompagne aussi bien les débutants souhaitant découvrir le tennis que les joueurs confirmés en quête de performance.',
+        'approach-quote': '"L\'objectif est clair : vous aider à donner le meilleur de vous-même, dans un environnement unique au cœur de la Provence."',
+        
+        // Locations section
+        'locations-description': 'Coaching possible sur vos <strong>terrains privés</strong>, <strong>hôtels partenaires</strong> dans le secteur <strong class="text-primary">Luberon/Alpilles</strong>.',
+        
+        // Services section
+        'services-bottom-text': '<strong>Débutants, joueurs confirmés ou compétiteurs :</strong> développez votre technique, votre stratégie et votre plaisir de jeu grâce à un accompagnement sur-mesure.',
+        
+        // Professional section
+        'pro-ranking': 'Classement officiel',
+        
+        // Testimonials
+        'testimonial1-text': '"Une expérience incroyable ! J\'ai énormément progressé en quelques séances seulement."',
+        'testimonial1-author': 'Sophie',
+        'testimonial1-location': 'Gordes',
+        'testimonial2-text': '"Un coach passionné et à l\'écoute. Idéal pour reprendre confiance et améliorer sa technique."',
+        'testimonial2-author': 'Marc',
+        'testimonial2-location': 'Saint-Rémy',
+        'testimonial3-text': '"Un coaching personnalisé qui fait toute la différence, je recommande vivement."',
+        'testimonial3-author': 'Thomas',
+        'testimonial3-location': 'Bonnieux',
+        
         // Footer
         'footer-navigation': 'Navigation',
         'footer-contact': 'Contact',
         'footer-description': 'Ancien joueur ATP et coach diplômé d\'État',
-        'footer-copyright': '© 2024 Private Tennis Coaching - Nathan Seateun. Tous droits réservés.'
+        'footer-copyright': '© 2025 Private Tennis Coaching - Nathan Seateun. Tous droits réservés.'
     },
     en: {
         // Navigation
@@ -108,11 +137,40 @@ const translations = {
         'contact-ready': 'Ready to play tennis under the Provence sun?',
         'contact-call': 'Call now',
         
+        // Gallery
+        'photos-description': 'Discover my journey through these photos',
+        
+        // Approach section
+        'approach-text1': 'Passionate about tennis since always and with experience in national and international competition, I put my expertise at the service of players of all ages and levels.',
+        'approach-text2': 'My approach combines <strong class="text-primary">technical rigor</strong>, <strong class="text-secondary">game pleasure</strong> and <strong class="text-accent">personalized adaptation</strong>, in order to allow you to progress in a friendly and motivating environment.',
+        'approach-text3': 'Trained at recognized academies and certified, I support both beginners wishing to discover tennis and experienced players seeking performance.',
+        'approach-quote': '"The objective is clear: to help you give your best, in a unique environment in the heart of Provence."',
+        
+        // Locations section
+        'locations-description': 'Coaching available on your <strong>private courts</strong>, <strong>partner hotels</strong> in the <strong class="text-primary">Luberon/Alpilles</strong> area.',
+        
+        // Services section
+        'services-bottom-text': '<strong>Beginners, experienced players or competitors:</strong> develop your technique, strategy and enjoyment of the game through personalized coaching.',
+        
+        // Professional section
+        'pro-ranking': 'Official ranking',
+        
+        // Testimonials
+        'testimonial1-text': '"An incredible experience! I progressed enormously in just a few sessions."',
+        'testimonial1-author': 'Sophie',
+        'testimonial1-location': 'Gordes',
+        'testimonial2-text': '"A passionate and attentive coach. Ideal for regaining confidence and improving technique."',
+        'testimonial2-author': 'Marc',
+        'testimonial2-location': 'Saint-Rémy',
+        'testimonial3-text': '"Personalized coaching that makes all the difference, I highly recommend."',
+        'testimonial3-author': 'Thomas',
+        'testimonial3-location': 'Bonnieux',
+        
         // Footer
         'footer-navigation': 'Navigation',
         'footer-contact': 'Contact',
         'footer-description': 'Former ATP player and state certified coach',
-        'footer-copyright': '© 2024 Private Tennis Coaching - Nathan Seateun. All rights reserved.'
+        'footer-copyright': '© 2025 Private Tennis Coaching - Nathan Seateun. All rights reserved.'
     }
 };
 
